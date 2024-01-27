@@ -98,11 +98,23 @@ footer {
   top: 2.5rem;
 }
 @media screen and (max-width: 768px) {
+  #map
+  {
+    height: 59vh;
+  }
+  
 }
 
 @media screen and (max-width: 576px) {
+  #map
+  {
+    height: 59vh;
+  }
   
 }
 @media screen and (max-width: 320px) {
-
+  #map
+  {
+    height: 59vh;
+  }
 }

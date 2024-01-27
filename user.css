@@ -76,3 +76,8 @@ p a {
 p a:hover {
     text-decoration: underline;
 }
+.social a 
+{
+    padding: 0.2rem;
+    color: blue;
+}
