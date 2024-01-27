@@ -27,12 +27,14 @@ nav {
   color: #ffa07a;
   font-weight: bolder;
 }
+
 #user-name,
 #user-logo {
   font-size: 1.35rem;
   padding: 2px;
   cursor: pointer;
 }
+
 #map {
   height: 69vh;
   margin: 0.5rem;
@@ -88,9 +90,19 @@ footer {
   height: 17vh;
   font-size: 1.3rem;
 }
+
 #result {
   font-size: 1.3rem;
   text-align: center;
   position: relative;
   top: 2.5rem;
+}
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 576px) {
+  
+}
+@media screen and (max-width: 320px) {
+
 }
