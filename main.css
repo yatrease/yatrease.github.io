@@ -33,6 +33,7 @@ nav {
   font-size: 1.35rem;
   padding: 2px;
   cursor: pointer;
+  overflow: hidden;
 }
 
 #map {
