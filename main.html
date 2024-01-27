@@ -31,7 +31,9 @@
     <div class="user-profile">
       <div>
         <!-- Add an id to the user icon for easy selection -->
-        <i class="ph ph-user" id="user-logo"></i> <span id="user-name"></span>
+        <div id="user-info">
+          <i class="ph ph-user" id="user-logo"></i> <span id="user-name"></span>
+        </div>
       </div>
     </div>
   </nav>
@@ -83,7 +85,7 @@
     }
 
     // Add click event listener to user icon
-    document.getElementById("user-logo").addEventListener("click", function() {
+    document.getElementById("user-info").addEventListener("click", function() {
       // Redirect to user.html
       window.location.href = "user.html";
     });

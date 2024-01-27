@@ -31,6 +31,7 @@ nav {
 #user-logo {
   font-size: 1.35rem;
   padding: 2px;
+  cursor: pointer;
 }
 #map {
   height: 69vh;
@@ -73,7 +74,7 @@ footer {
 }
 
 #user-logo {
-  border: 2px solid black;
+  border: 2px solid white;
   border-radius: 50%;
   padding: 0.3rem;
   cursor: pointer;
