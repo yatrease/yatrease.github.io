@@ -81,3 +81,12 @@ p a:hover {
     padding: 0.2rem;
     color: blue;
 }
+
+#add-balance
+{
+    border-radius: 8px;
+    background-color: #45a049;
+    padding: 0.5rem;
+    border: none;
+    color: white;
+}
