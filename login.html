@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yatrease - Login</title>
+    <link rel="stylesheet" href="login.css" />
+    <style>
+      .show-password {
+        margin-top: 10px;
+      }
+    </style>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="leftside">
+        <h2 id="display-login">Login to Yatrease</h2>
+        <br />
+
+        <form id="loginForm">
+          <div class="username">
+            <i class="ph ph-user"></i>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Username/Email: "
+              required
+            />
+          </div>
+          <div class="phone-number">
+            <i class="ph ph-phone"></i>
+            <input
+              type="tel"
+              id="phone-number"
+              name="phone-number"
+              placeholder="Phone Number: "
+              required
+            />
+          </div>
+          <div class="password">
+            <i class="ph ph-lock"></i>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password: "
+              required
+            />
+          </div>
+          <div class="show-password">
+            <input type="checkbox" id="show-password" /> Show Password
+          </div>
+          <button type="submit" id="login">Login</button>
+        </form>
+        <div class="askuser">
+          <p id="ask-user">
+            Don't have an account?
+            <a href="register.html" id="register">Register here</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("show-password")
+        .addEventListener("change", function () {
+          var passwordInput = document.getElementById("password");
+          passwordInput.type = this.checked ? "text" : "password";
+        });
+
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Get username, phone number, and password from the form
+          var username = document.getElementById("username").value;
+          var phoneNumber = document.getElementById("phone-number").value;
+          var password = document.getElementById("password").value;
+
+          // Retrieve user details from local storage
+          var storedUsername = localStorage.getItem("username");
+          var storedPhoneNumber = localStorage.getItem("phoneNumber");
+          var storedPassword = localStorage.getItem("password");
+
+          // Check if entered credentials match stored credentials
+          if (
+            username === storedUsername &&
+            phoneNumber === storedPhoneNumber &&
+            password === storedPassword
+          ) {
+            // Redirect user to dashboard or desired page
+            window.location.href = "main.html";
+          } else {
+            // Display an error message or handle incorrect credentials
+            alert("Invalid username, phone number, or password. Please try again.");
+          }
+        });
+    </script>
+  </body>
+</html>

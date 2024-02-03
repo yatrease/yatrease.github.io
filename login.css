@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #997e93;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+}
+.container {
+  display: flex;
+  /*border: 2px solid black;*/
+  background-color: #f8e3f3;
+  height: 75vh;
+  width: 30%;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+}
+.leftside {
+  flex: 1;
+  padding: 30px;
+}
+
+.leftside form {
+  display: flex;
+  flex-direction: column;
+}
+.rightside {
+  flex: 1.2;
+  padding: 30px;
+  /* border:0.5px solid black;*/
+}
+
+form {
+  position: relative;
+  top: 10%;
+}
+
+#display-login {
+  text-align: center;
+  margin: 2rem 2rem 0 2rem;
+  color: #ffa07a;
+}
+
+#username,
+#password,
+#login, #phone-number {
+  border: 2px solid black;
+  width: 80%;
+  margin: 0.5rem 2rem 0.5rem 0.5rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: 200ms all ease-in-out;
+}
+#login {
+  margin: 1rem 2rem 0.5rem 2rem;
+  background-color: #9b59b6;
+  color: white;
+}
+#login:hover {
+  transform: scale(1.08);
+}
+
+.show-password {
+  margin: 0.5rem 2rem;
+}
+
+#ask-user {
+  margin: 4rem;
+  text-align: center;
+}
+
+#register {
+  text-decoration: none;
+  color: green;
+}
+
+.username,
+.password, .phone-number {
+  display: flex;
+}
+.username i,
+.password i, .phone-number i {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+#logophoto {
+  height: 150px;
+  width:200px;
+  border-radius: 8px;
+
+  margin-bottom: -20px;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+}
+button:hover {
+  cursor: pointer;
+}
+h2 {
+  color: #ffa07a;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+#logophoto {
+  border-radius: 8px;
+}
+p {
+  font-size: 20px;
+  margin-top: 20px;
+}
+#logo {
+  margin-top: 10px;
+}
+#about {
+  margin-top: 12px;
+}
+.info {
+  padding: 10px;
+}
+.info{
+  padding:10px;
+}
+@media screen and (max-width: 768px) {
+  .container {
+      width: 90%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+      width: 95%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .container {
+      width: 100%;
+      margin-top: 0;
+      
+  }
+  #display-login{
+    margin-top: 0;
+  }
+  .askuser p{
+    font-size:17px;
+    
+  }
+  #username{
+    margin-bottom:5px;
+  }
+}

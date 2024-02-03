@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="user.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h2>User Profile</h2>
+        <div class="profile-info">
+            <p><strong>Username:</strong> <span id="username"></span></p>
+            <p><strong>Phone Number:</strong> <span id="phone"></span></p>
+        </div>
+        <button type="button" id="add-balance">Add Balance</button>
+        <div class="change-phone">
+            <h3>Change Phone Number</h3>
+            <form id="changePhoneForm">
+                <input type="text" id="newPhone" name="newPhone" placeholder="New Phone Number" required>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+                <button type="submit">Change Phone Number</button>
+            </form>
+        </div>
+        <p><a href="index.html">Logout</a></p>
+        <div class="social">
+            <a href="#"><i class="ph ph-facebook-logo"></i> Facebook</a>
+            <a href="#"><i class="ph ph-twitter-logo"></i> Twitter</a>
+            <a href="#"><i class="ph ph-instagram-logo"></i> Instagram</a>
+        </div>
+        <p>&copy; 2024 Yatrease. All Rights Reserved.</p>
+    </div>
+
+    <script>
+        // Retrieve user information from local storage
+        var username = localStorage.getItem("username");
+        var phone = localStorage.getItem("phoneNumber");
+
+        // Display user information in the profile
+        document.getElementById("username").textContent = username;
+
+        // Check if the phone number is available and display it
+        if (phone) {
+            document.getElementById("phone").textContent = phone;
+        } else {
+            document.getElementById("phone").textContent = "Phone number not available";
+        }
+
+        // Handle form submission to change phone number
+        document.getElementById("changePhoneForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var newPhone = document.getElementById("newPhone").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+
+            // Retrieve stored password from local storage
+            var storedPassword = localStorage.getItem("password");
+
+            // Check if the entered password matches the stored password
+            if (confirmPassword !== storedPassword) {
+                alert("Incorrect password");
+                return;
+            }
+
+            // Update the phone number in local storage
+            localStorage.setItem("phone", newPhone);
+
+            // Update the phone number displayed in the profile
+            document.getElementById("phone").textContent = newPhone;
+
+            alert("Phone number updated successfully");
+        });
+        
+    </script>
+</body>
+</html>
